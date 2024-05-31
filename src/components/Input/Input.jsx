@@ -1,6 +1,7 @@
 import './Input.scss';
 
 function Input({
+  testId,
   label,
   type,
   customClass,
@@ -13,6 +14,7 @@ function Input({
     <section className='input'>
       <label className='input__label'>{label}</label>
       <input
+      data-testid= {testId}
         type={type}
         className={`input__field ${customClass ? customClass : ''}`}
         name={name}

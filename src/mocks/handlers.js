@@ -10,7 +10,7 @@ const bookings = [
         "price":220,
         "id":"STR2658KTPT",
         "active":true
-    }
+    },
 ]
 
 
