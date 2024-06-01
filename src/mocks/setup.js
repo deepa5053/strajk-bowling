@@ -1,15 +1,4 @@
-import { afterEach } from 'vitest';
-import { cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/vitest';
-import { server } from './src/mocks/setup';
+import { setupServer } from 'msw/node';
+import { handlers } from './handlers';
 
-afterEach(() => {
-  cleanup();
-});
-beforeAll(() => {
-  server.listen();
-});
-
-afterAll(() => {
-  server.close();
-});
+export const server = setupServer(...handlers);

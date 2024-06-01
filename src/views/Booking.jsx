@@ -36,8 +36,7 @@ function Booking() {
 
     if (value.length === 2 || value.length === 0) {
       setShoes((prevState) =>
-        prevState.map((shoe) =>
-          shoe.id === name ? { ...shoe, size: value } : shoe
+        prevState.map((shoe) => shoe.id === name ? { ...shoe, size: value } : shoe  
         )
       );
     }
@@ -84,7 +83,7 @@ function Booking() {
       }
     );
     const data = await response.json();
-
+    console.log(data);
     return data;
   }
 
@@ -108,7 +107,7 @@ function Booking() {
         people: booking.people,
         shoes: shoes.map((shoe) => shoe.size),
       };
-
+      console.log(bookingInfo);
       const confirmation = await sendBooking(bookingInfo);
       setConfirmation(confirmation);
     } else {

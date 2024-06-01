@@ -1,5 +1,4 @@
 import './Confirmation.scss';
-
 import Top from '../Top/Top';
 import Navigation from '../Navigation/Navigation';
 import Input from '../Input/Input';
@@ -41,7 +40,7 @@ function Confirmation({ confirmationDetails, setConfirmation }) {
           />
           <article className='confirmation__price'>
             <p>Total:</p>
-            <p>{confirmationDetails.price} sek</p>
+            <p data-testid="price">{confirmationDetails.price} sek</p>
           </article>
           <button
             className='button confirmation__button'
